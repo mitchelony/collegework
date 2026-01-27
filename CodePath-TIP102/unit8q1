@@ -1,0 +1,154 @@
+# # Problem 1: Reverse Sentence
+# # Write a function reverse_sentence() that takes in a string sentence and returns the sentence with the order of the words reversed.
+# # The sentence will contain only alphabetic characters and spaces to separate the words.
+# # If there is only one word in the sentence, the function should return the original string.
+
+# def reverse_sentence(sentence):
+#     stack = sentence.split()
+#     stack = stack[::-1]
+#     return ' '.join(stack)
+
+# Example Usage:
+
+# sentence = "tubby little cubby all stuffed with fluff"
+# print(reverse_sentence(sentence))
+
+# sentence = "Pooh"
+# print(reverse_sentence(sentence))
+# # Example Output:
+
+# # "fluff with stuffed all cubby little tubby"
+# # "Pooh"
+
+# Problem 1: Transpose Matrix
+# Write a function transpose() that accepts a 2D integer array matrix and returns the transpose of matrix.
+# The transpose of a matrix is the matrix flipped over its main diagonal, swapping the rows and columns.
+
+# def transpose(matrix):
+#     rows, cols = len(matrix), len(matrix[0])
+    
+#     result = [[0 for _ in range(rows)] for _ in range(cols)]
+    
+#     for i in range(len(matrix)):
+#         for j in range(len(matrix[0])):
+#             result[j][i] = matrix[i][j]
+
+#     return result
+    
+#     # what does terminal say
+
+# # Example Usage
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+# print(transpose(matrix))
+
+# matrix = [
+#     [1, 2, 3],
+#     [4, 5, 6]
+# ]
+# print(transpose(matrix))
+# Example Output:
+# [
+#     [1, 4, 7],
+#     [2, 5, 8],
+#     [3, 6, 9]
+# ]
+# [
+#     [1, 4],
+#     [2, 5],
+#     [3, 6]
+# ]
+
+
+
+# Problem 2: Two-Pointer Reverse List
+# Write a function reverse_list() that takes in a list lst and returns elements of the list in reverse order.
+# The list should be reversed in-place without using list slicing (e.g. lst[::-1]).
+# Instead, use the two-pointer approach, which is a common technique in which we initialize two variables 
+# (also called a pointer in this context) to track different indices or places in a list or string, then 
+# moves the pointers to point at new indices based on certain conditions. In the most common variation of 
+# the two-pointer approach, we initialize one variable to point at the beginning of a list and a second 
+# variable/pointer to point at the end of list. We then shift the pointers to move inwards through the list 
+# towards each other, until our problem is solved or the pointers reach the opposite ends of the list.
+
+# def reverse_list(lst):
+#     left = 0
+#     right = len(lst) - 1
+
+#     while (left <= right):
+#         temp = lst[left]
+#         lst[left] = lst[right]
+#         lst[right] = temp
+#         left += 1
+#         right -= 1
+
+#     return lst
+
+# # RUN CODE PDDSFSDFSDFDSFDFSFSDF
+
+# # Example Usage
+# lst = ["pooh", "christopher robin", "piglet", "roo", "eeyore"]
+# print(reverse_list(lst))
+
+# Example Output:
+# ["eeyore", "roo", "piglet", "christopher robin", "pooh"]
+
+
+# Problem 3: Remove Duplicates
+# Write a function remove_dupes() that accepts a sorted array items, and removes 
+# the duplicates in-place such that each element appears only once. Return the 
+# length of the modified array. You may not create another array; your 
+# implementation must modify the original input array items.
+
+# def remove_dupes(items):
+#     count = 1
+
+#     for i in range(len(items) - 1):
+#         if (items[i] != items[i + 1]):
+#             count += 1
+
+#     return count
+
+#     # run code pls
+
+# # Example Usage
+# items = ["extract of malt", "haycorns", "honey", "thistle", "thistle"]
+# print(remove_dupes(items))
+
+# items = ["extract of malt", "haycorns", "honey", "thistle"]
+# print(remove_dupes(items))
+# Example Output:
+
+# 4
+# 4
+
+
+# Problem 4: Sort Array by Parity
+# Given an integer array nums, write a function sort_by_parity() that
+# moves all the even integers at the beginning of the array followed by all the odd integers.
+# Return any array that satisfies this condition.
+
+def sort_by_parity(nums):
+    result = []
+
+    for num in nums:
+        if num % 2 == 0:
+            result.append(num)
+            print(result)
+            nums.remove(num)
+    return result.extend(nums)
+
+
+# Example Usage
+nums = [3, 1, 2, 4]
+print(sort_by_parity(nums))
+nums = [0]
+print(sort_by_parity(nums))
+
+
+# Example Output:
+# [2, 4, 3, 1]
+# [0]
