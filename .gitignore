@@ -1,4 +1,9 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
 .venv/
 __pycache__/
 *.pyc
@@ -11,3 +16,19 @@ node_modules/
 
 # Logs
 *.log
+
+# C/C++ build artifacts
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+a.out
+*.dSYM/
+
+# Build output folders
+build/
+bin/
+out/
