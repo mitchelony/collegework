@@ -50,5 +50,13 @@ int main ()
         cout << cur->data << endl;
     }
 
+    p1->next = p5;
+    delete p2;
+
+    for (cur = head; cur != NULL; cur=cur->next)
+    {
+        cout << cur->data << endl;
+    }
+
     return 0;
 };
