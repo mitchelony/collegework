@@ -4,19 +4,27 @@ using namespace std;
 
 int main()
 {
-    list<float> L;
-    L.push_back(2.2);
-    L.push_front(1.1);
+    list<int> L;
+    L.push_back(2);
+    L.push_front(1);
     L.insert(++L.begin(), 0);
-    L.push_back(3.2);
+    L.push_back(3);
     L.push_back(0);
 
-    list<float>::iterator i;
+    list<int>::iterator i;
 
     for (i = L.begin(); i != L.end(); ++ i)
     {
         cout << *i << " ";
     }
     cout << endl;
+
+    L.sort();
+    for (i = L.begin(); i != L.end(); ++ i)
+    {
+        cout << *i << " ";
+    }
+    cout << endl;
+
     return 0;
 };
